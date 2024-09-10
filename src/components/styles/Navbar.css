@@ -1,0 +1,87 @@
+.navbar {
+    min-height: 60px;
+    width: 100%;
+    position: fixed !important;
+    z-index: 9999;
+    background-color: var(--dark-background);
+}
+
+.navbar a {
+    color: white !important;
+    text-shadow: 0 0 2px black;
+}
+
+.navbar .nav-link:hover {
+    transform: scale(1.1);
+    transition: transform 0.03s ease-in;
+    color: var(--dark-grey);
+}
+
+.navbar__brand {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+.navbar__collapse {
+    top: 60px;
+    left: 0;
+    background-color: var(--dark-background);
+    width: 100% !important;
+}
+
+.search-icon {
+    position: absolute;
+    top: 30px;
+    left: 90px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.navbar__brand-icon {
+    transform: rotate(-10deg);
+}
+
+.brand-icon:hover {
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-delay: 0.1s;
+}
+
+@media screen and (min-width: 571px) {
+    .navbar .nav-link:hover::before { 
+        /* Only show dot under link when navbar is expanded */
+        transform: translateX(-50%);
+        border-radius: 100%; /* Add dot under the link */
+        position: absolute;
+        background: white;
+        bottom: 1px;
+        height: 5px;
+        content: '';
+        width: 5px;
+        left: 50%;
+        box-shadow: 0 0 2px black;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .navbar__collapse {
+        position: absolute;
+        padding-left: 20px;
+    }
+
+    .navbar .nav-link:hover {
+        background-color: rgb(20, 20, 20);
+        transform: none;
+    }
+}
+
+@keyframes spin {
+    0% {
+      rotate: 0deg;
+    }
+    100% {
+      rotate: 360deg;
+    }
+  }
