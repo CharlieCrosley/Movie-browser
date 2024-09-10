@@ -1,6 +1,8 @@
 # Movie browser
 
-React frontend landing page to browse movies using the TMDB API.
+React frontend landing page to browse movies using the TMDB API. 
+
+Website can be found [here](https://charliecrosley.github.io/Movie-browser/)
 
 ### Prerequisites
 
